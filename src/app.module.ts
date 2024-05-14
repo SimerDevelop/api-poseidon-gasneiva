@@ -30,7 +30,7 @@ import { StationaryTankModule } from './stationary-tank/stationary-tank.module';
       port: 3306,
       username: 'root',
       password: '123',
-      database: 'sistema_registros',
+      database: 'poseidon_gasneiva',
       entities: [__dirname + '/**/*.entity{.ts,.js}'], // Ruta a las entidades
       synchronize: true,
     }),

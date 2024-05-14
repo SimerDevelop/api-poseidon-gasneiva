@@ -97,7 +97,7 @@ export class UsuariosService {
       }
 
       // Generar un token de acceso
-      const accessToken = jwt.sign({ userId: user.id, key: 'poseidon-gasco.9010' }, 'poseidon', { expiresIn: '1h' });
+      const accessToken = jwt.sign({ userId: user.id, key: 'poseidon-gasneiva.9010' }, 'poseidon', { expiresIn: '1h' });
 
       return ResponseUtil.success(
         200,

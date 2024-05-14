@@ -26,26 +26,6 @@ export class AuthService {
     private readonly rolesRepository: Repository<Roles>,
   ) { }
 
-  createTempFolder() {
-    // Verifica si la carpeta temp ya existe
-    if (!fs.existsSync(tempDir)) {
-      // Crea la carpeta temp si no existe
-      fs.mkdirSync(tempDir);
-      console.log('Carpeta "temp" creada correctamente en la ruta:', tempDir);
-    } else {
-      console.log('La carpeta "temp" ya existe en la ruta:', tempDir);
-    }
-
-    // Verifica si la carpeta pdf ya existe
-    if (!fs.existsSync(pdfDir)) {
-      // Crea la carpeta pdf si no existe
-      fs.mkdirSync(pdfDir);
-      console.log('Carpeta "pdf" creada correctamente en la ruta:', pdfDir);
-    } else {
-      console.log('La carpeta "pdf" ya existe en la ruta:', pdfDir);
-    }
-  }
-
   async createInitialPermissions() {
 
     let existingPermissions: Permissions[] = [];
@@ -151,6 +131,7 @@ export class AuthService {
     const userBase = new Usuario();
     userBase.id = uuidv4();
     userBase.state = 'ACTIVO';
+    userBase.status = 'DISPONIBLE';
     userBase.firstName = 'Usuario';
     userBase.lastName = 'Admin';
     userBase.email = 'adminuser@admin.com';
