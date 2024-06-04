@@ -129,11 +129,11 @@ export class BillService {
             "status": "CARGADO"
           }
 
-          const responseupdateStatus = await this.commonService.updateBranchOfficeStatus(branchOfficeId, statusBranchOffice);
+          // const responseupdateStatus = await this.commonService.updateBranchOfficeStatus(branchOfficeId, statusBranchOffice);
 
-          if (responseupdateStatus.statusCode == 200) {
-            this.commonService.findCoursesByOperatorNameAndLastName(createdBill.operator_firstName, createdBill.operator_lastName);
-          }
+          // if (responseupdateStatus.statusCode == 200) {
+          //   this.commonService.findCoursesByOperatorNameAndLastName(createdBill.operator_firstName, createdBill.operator_lastName);
+          // }
 
           return ResponseUtil.success(
             200,
